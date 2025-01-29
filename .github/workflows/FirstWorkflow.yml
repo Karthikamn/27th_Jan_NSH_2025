@@ -5,8 +5,7 @@ on: push
 jobs:
  job1:
   runs-on: ubuntu-latest
-  steps:
-   - name: Print
-   - run: echo "display the workflow"
+  steps: 
+    - run: echo "display the workflow"
 
 
