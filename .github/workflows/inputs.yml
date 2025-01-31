@@ -11,4 +11,6 @@ on:
 jobs:
  echo-data:
   runs-on: ubuntu-latest
+  steps:
+   - run: echo "Print inputs"
   
