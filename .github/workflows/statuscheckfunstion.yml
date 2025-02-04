@@ -1,0 +1,24 @@
+name: Status Check functions
+
+on:
+ push:
+ workflow_dispatch:
+jobs:
+ echo-functions:
+  runs-on: ubuntu-latest
+  steps: 
+   - name: Failure Step
+     run: exit 1
+   - name: I will be skipped
+     if: ${{success()}}
+     run: echo "I will be printed if previous step is success"
+   - name: I will be success
+     if: ${{failure()}}
+     run: echo "I will be printed if first step is failed"
+   - name: I will be cancelled
+     if: ${{cancelled()}}
+     run: echo "I will be printed if the workflow is cancelled"
+   - name: I will be not cancelled
+     if: ${{!cancelled()}}
+     run: echo "I will be always printed"
+     
