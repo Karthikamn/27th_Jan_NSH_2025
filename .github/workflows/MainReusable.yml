@@ -4,6 +4,6 @@ on:
  push:
 jobs:
  echo-reusable-workflow:
-  uses: ./.github/workflows/Reusable.yml
+  uses: ./.github/workflows/reusable.yml
   with:
    message: 'Hello calling from main workflow'
